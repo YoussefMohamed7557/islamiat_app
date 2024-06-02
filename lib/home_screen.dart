@@ -19,12 +19,13 @@ class _HomeScreenState extends State<HomeScreen> {
       children:[
         Image.asset("assets/images/main_background.png",width: double.maxFinite,height: double.maxFinite,fit: BoxFit.fill,),
         Scaffold(
-          appBar: AppBar(title: Center(child:Text("اسلاميات",style: Theme.of(context).textTheme.headline1,),),),
+          appBar: AppBar(title:Center(child:Text("اسلاميات",style: Theme.of(context).textTheme.headline1,),),),
           bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
               canvasColor: Theme.of(context).primaryColor
             ),
             child: BottomNavigationBar(
+              iconSize: 32,
               currentIndex: currentIndex,
               onTap: (index){
                 currentIndex = index;
