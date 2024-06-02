@@ -3,6 +3,9 @@ import 'package:islamiat/app_theme.dart';
 import 'package:islamiat/imagesPath.dart';
 import 'package:islamiat/surah_details.dart';
 
+import 'list_items/seprator_item.dart';
+import 'list_items/surah_name_item.dart';
+
 class QuraanTap extends StatelessWidget {
   List<String> suraName = [
     "الفاتحه",
@@ -129,20 +132,8 @@ class QuraanTap extends StatelessWidget {
             child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: ListView.separated(
-              itemBuilder: (context, index) => InkWell(
-                onTap: (){Navigator.pushNamed(context, SurahDetails.routeName,arguments: SurahDetailsArgs(index, suraName[index]));},
-                child: Center(
-                  child: Text(" ${suraName[index]} " ,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600, fontSize: 24,color: AppTheme.blackColor),
-                  ),
-                ),
-              ),
-              separatorBuilder: (context, index) => Container(
-                    margin: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                    height: 2,
-                    color: AppTheme.lightPrimary,
-                  ),
+              itemBuilder: (context, index) => SurahNameItem(index,suraName[index]),
+              separatorBuilder: (context, index) => SepratorItem(),
               itemCount: suraName.length),
         ))
       ],
