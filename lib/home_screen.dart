@@ -25,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
               canvasColor: Theme.of(context).primaryColor
             ),
             child: BottomNavigationBar(
+              iconSize: 32,
               currentIndex: currentIndex,
               onTap: (index){
                 currentIndex = index;
