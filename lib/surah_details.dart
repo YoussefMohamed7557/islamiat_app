@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islamiat/imagesPath.dart';
+import 'package:islamiat/list_items/seprator_item.dart';
 
 import 'app_theme.dart';
+import 'list_items/surah_verses_item.dart';
 
 class SurahDetails extends StatefulWidget {
   static const String routeName = "SurahDetails";
@@ -22,7 +25,7 @@ class _SurahDetailsState extends State<SurahDetails> {
     }
     return Stack(children: [
       Image.asset(
-        "assets/images/main_background.png",
+        ImagesPath.MAIN_BACKGROUND,
         width: double.maxFinite,
         height: double.maxFinite,
         fit: BoxFit.fill,
@@ -49,23 +52,8 @@ class _SurahDetailsState extends State<SurahDetails> {
                 child: CircularProgressIndicator(),
               )
             : ListView.separated(
-                itemBuilder: (context, index) => Center(
-                      child: Text(
-                        " ${surahLines[index]} (${index + 1})",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 24,
-                            color: AppTheme.blackColor,
-                        ),
-                      ),
-                    ),
-                separatorBuilder: (context, index) => Container(
-                      margin:
-                          EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                      height: 2,
-                      color: AppTheme.lightPrimary,
-                    ),
+                itemBuilder: (context, index) => SurahVersesItem(index,surahLines[index]),
+                separatorBuilder: (context, index) =>SepratorItem(),
                 itemCount: surahLines.length),
       )
     ]);
