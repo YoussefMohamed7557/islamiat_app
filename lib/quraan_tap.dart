@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamiat/app_theme.dart';
 import 'package:islamiat/imagesPath.dart';
+import 'package:islamiat/surah_details.dart';
 
 class QuraanTap extends StatelessWidget {
   List<String> suraName = [
@@ -128,14 +129,15 @@ class QuraanTap extends StatelessWidget {
             child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: ListView.separated(
-              itemBuilder: (context, index) => Container(
-                    child: Center(
-                      child: Text(" ${suraName[index]}  ( ${index + 1} )" ,
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 24),
-                      ),
-                    ),
+              itemBuilder: (context, index) => InkWell(
+                onTap: (){Navigator.pushNamed(context, SurahDetails.routeName,arguments: SurahDetailsArgs(index, suraName[index]));},
+                child: Center(
+                  child: Text(" ${suraName[index]} " ,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600, fontSize: 24,color: AppTheme.blackColor),
                   ),
+                ),
+              ),
               separatorBuilder: (context, index) => Container(
                     margin: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                     height: 2,
