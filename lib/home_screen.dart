@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
-class HomeScreen extends StatelessWidget {
+import 'package:islamiat/hadeth_tap.dart';
+import 'package:islamiat/quraan_tap.dart';
+import 'package:islamiat/radio_tap.dart';
+import 'package:islamiat/tasbeh_tap.dart';
+
+class HomeScreen extends StatefulWidget {
   static const String routName = "HomeScreen";
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  int currentIndex = 0;
+  List<Widget> content = [QuraanTap(),HadethTap(),TasbehTap(),RadioTap()];
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -13,6 +25,11 @@ class HomeScreen extends StatelessWidget {
               canvasColor: Theme.of(context).primaryColor
             ),
             child: BottomNavigationBar(
+              currentIndex: currentIndex,
+              onTap: (index){
+                currentIndex = index;
+                setState((){});
+              },
               items: [
                   BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/ic_quran.png')),label: "Quraan"),
                   BottomNavigationBarItem(icon: ImageIcon(AssetImage('assets/images/ic_hadeth.png')),label: "Hadeth"),
@@ -21,6 +38,7 @@ class HomeScreen extends StatelessWidget {
                ],
             ),
           ),
+          body: content[currentIndex],
         ),
       ] ,
     );
