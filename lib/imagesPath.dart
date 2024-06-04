@@ -1,5 +1,6 @@
 class ImagesPath{
   static final String QURAAN_HEADER = "assets/images/quran_header_image.png";
+  static final String HADETH_HEADER = "assets/images/hadeth_header1.png";
   static final String QARAAN_ICON = "assets/images/ic_quran.png";
   static final String HADETH_ICON = "assets/images/ic_hadeth.png";
   static final String TASBEH_ICON = "assets/images/ic_sebha.png";
