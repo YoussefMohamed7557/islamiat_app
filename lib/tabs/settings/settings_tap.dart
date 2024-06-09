@@ -25,7 +25,7 @@ class _SettingsTapState extends State<SettingsTap> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(AppLocalizations.of(context)!.language,style: Theme.of(context).textTheme.headline1,),
+          Text(AppLocalizations.of(context)!.language,style: Theme.of(context).textTheme.headline1?.copyWith(color:provider.themeMode==ThemeMode.light?AppTheme.blackColor:Colors.white),),
           InkWell(
             onTap: (){
               showLanguageBottomSheet();
@@ -37,7 +37,7 @@ class _SettingsTapState extends State<SettingsTap> {
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),border: Border.all(color: provider.themeMode==ThemeMode.light?AppTheme.lightPrimary:AppTheme.colorGold)),
             ),
           ),
-          Text(AppLocalizations.of(context)!.theme,style: Theme.of(context).textTheme.headline1,),
+          Text(AppLocalizations.of(context)!.theme,style: Theme.of(context).textTheme.headline1?.copyWith(color:provider.themeMode==ThemeMode.light?AppTheme.blackColor:Colors.white),),
           InkWell(
             onTap: (){
               showThemeBottomSheet();
