@@ -31,10 +31,10 @@ class _SettingsTapState extends State<SettingsTap> {
               showLanguageBottomSheet();
             },
             child: Container(
-              child: Text(selectedLanguage, style: TextStyle(fontSize: 22,fontWeight: FontWeight.w300),),
+              child: Text(selectedLanguage, style: TextStyle(fontSize: 22,fontWeight: FontWeight.w300,color: provider.themeMode==ThemeMode.light?AppTheme.blackColor:Colors.white),),
               margin: EdgeInsets.all(12),
               padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),border: Border.all(color: Theme.of(context).primaryColor)),
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),border: Border.all(color: provider.themeMode==ThemeMode.light?AppTheme.lightPrimary:AppTheme.colorGold)),
             ),
           ),
           Text(AppLocalizations.of(context)!.theme,style: Theme.of(context).textTheme.headline1,),
@@ -43,10 +43,10 @@ class _SettingsTapState extends State<SettingsTap> {
               showThemeBottomSheet();
             },
             child: Container(
-              child: Text(selectedThemeMode, style: TextStyle(fontSize: 22,fontWeight: FontWeight.w300),),
+              child: Text(selectedThemeMode, style: TextStyle(fontSize: 22,fontWeight: FontWeight.w300,color: provider.themeMode==ThemeMode.light?AppTheme.blackColor:Colors.white),),
               margin: EdgeInsets.all(12),
               padding: EdgeInsets.all(12),
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),border: Border.all(color: Theme.of(context).primaryColor)),
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),border: Border.all(color: provider.themeMode==ThemeMode.light?AppTheme.lightPrimary:AppTheme.colorGold)),
             ),
           )
         ],

@@ -52,7 +52,7 @@ class _ThemeBottomSheetWidgetState extends State<ThemeBottomSheetWidget> {
                     )),
             Icon(
               Icons.check,
-              color: Theme.of(context).primaryColor,
+              color: AppTheme.lightPrimary,
             )
           ],
         ),

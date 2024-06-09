@@ -7,6 +7,7 @@ class AppTheme {
   static const Color colorGold = Color(0xFFFACC1D);
   static final ThemeData lightTheme = ThemeData(
       primaryColor: lightPrimary,
+      secondaryHeaderColor: blackColor,
       scaffoldBackgroundColor: Colors.transparent,
       appBarTheme: AppBarTheme(
           backgroundColor: Colors.transparent,
@@ -23,6 +24,7 @@ class AppTheme {
 
   static final ThemeData darkTheme = ThemeData(
       primaryColor: darkPrimary,
+      secondaryHeaderColor: colorGold,
       scaffoldBackgroundColor: Colors.transparent,
       appBarTheme: AppBarTheme(
           backgroundColor: Colors.transparent,

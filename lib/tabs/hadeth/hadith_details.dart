@@ -61,7 +61,7 @@ class _HadithDetailsState extends State<HadithDetails> {
                       margin: const EdgeInsets.all(18),
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                          border: Border.all(color:Theme.of(context).primaryColor),
+                          border: Border.all(color: provider.themeMode==ThemeMode.light?AppTheme.lightPrimary:AppTheme.colorGold),
                           borderRadius: BorderRadius.circular(20),
                           color: Color.fromARGB(36, 30, 30, 51)),
                     ),

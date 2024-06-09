@@ -53,7 +53,7 @@ class _LanguagesBottomSheetWidgetState
               style: Theme.of(context)
                   .textTheme
                   .displaySmall
-                  ?.copyWith(color: AppTheme.lightPrimary),
+                  ?.copyWith(color: Theme.of(context).primaryColor),
             ),
             Icon(
               Icons.check,
