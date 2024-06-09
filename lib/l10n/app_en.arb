@@ -1,0 +1,21 @@
+{
+  "islamiat" : "Eslamiat",
+  "quraan" : "Quraan",
+  "hadeth" : "Hadeth",
+  "sebha" : "Sebha",
+  "radio": "Radio",
+  "hadith_number" : "Hadith number",
+  "sbhan_allah" : "Subhan allah",
+  "alhamd_lillahi": "Alhamdu lillah",
+  "allah_akbaru": "Allaho akbar",
+  "tahleel" : "La Elah Ella Allaho Wahdaho La Shareek Lah .. Laho 'Lmolk W Laho 'Lhamdo .. Wa Howa Ala Kulli Shayen Qadir",
+  "click_here" : "Click Here",
+  "zekr_number" : "Zekr number",
+  "setting" : "setting",
+  "language" : "Language",
+  "arabic": "Arabic",
+  "english":"English",
+  "theme": "Theme",
+  "dark_mode" : "Dark Mode",
+  "light_mode" : "Light Mode"
+}

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:islamiat/hadith_details.dart';
+import 'package:islamiat/tabs/hadeth/hadith_details.dart';
 import '../app_theme.dart';
-import '../surah_details.dart';
+import '../tabs/quraan/surah_details.dart';
 
 class HadithNameItem extends StatelessWidget {
   int index;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../app_theme.dart';
-import '../surah_details.dart';
+import '../tabs/quraan/surah_details.dart';
 
 class SurahNameItem extends StatelessWidget {
   int index;

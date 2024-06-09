@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamiat/imagesPath.dart';
-import 'package:islamiat/list_items/seprator_item.dart';
-
-import 'app_theme.dart';
-import 'list_items/surah_verses_item.dart';
+import '../../app_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadithDetails extends StatefulWidget {
   static const String routeName = "HadithDetails";
@@ -37,7 +35,7 @@ class _HadithDetailsState extends State<HadithDetails> {
                   flex: 3,
                 ),
                 Text(
-                  "اسلاميات",
+                  AppLocalizations.of(context)!.islamiat,
                   style: Theme.of(context).textTheme.headline1,
                 ),
                 const Spacer(
@@ -74,7 +72,6 @@ class _HadithDetailsState extends State<HadithDetails> {
     setState(() {});
   }
 }
-
 class HadithDetailsArgs {
   int index;
   String hadithName;

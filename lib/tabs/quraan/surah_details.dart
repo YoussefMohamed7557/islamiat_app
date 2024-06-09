@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamiat/imagesPath.dart';
 import 'package:islamiat/list_items/seprator_item.dart';
-
-import 'app_theme.dart';
-import 'list_items/surah_verses_item.dart';
+import '../../list_items/surah_verses_item.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SurahDetails extends StatefulWidget {
   static const String routeName = "SurahDetails";

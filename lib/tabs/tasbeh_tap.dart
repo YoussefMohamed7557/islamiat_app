@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamiat/app_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class TasbehTap extends StatefulWidget {
   @override
@@ -8,13 +9,13 @@ class TasbehTap extends StatefulWidget {
 
 class _TasbehTapState extends State<TasbehTap> {
   int counter = 0;
-
   int currentTasbeh = 0;
 
-  List<String> tasbihList = ["سبحان الله","الحمد لله","الله أكبر","لا اله الا الله وحده لاشريك له الملك و له الحمد و هو على كل شئ قدير"];
+  List<String> tasbihList = [];
 
   @override
   Widget build(BuildContext context) {
+    tasbihList = [AppLocalizations.of(context)!.sbhan_allah,AppLocalizations.of(context)!.alhamd_lillahi,AppLocalizations.of(context)!.allah_akbaru,AppLocalizations.of(context)!.tahleel];
     return  Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -28,7 +29,7 @@ class _TasbehTapState extends State<TasbehTap> {
           padding: EdgeInsets.all(24),
           margin: EdgeInsets.all(24),
         ),
-        Text("عدد التسبيحات ",style: Theme.of(context).textTheme.headline1,),
+        Text(AppLocalizations.of(context)!.zekr_number,style: Theme.of(context).textTheme.headline1,),
         SizedBox(height: 24,),
         Container(
           decoration: BoxDecoration(color: Color.fromARGB(211, 200, 178, 149),borderRadius: BorderRadius.circular(28)),
@@ -39,7 +40,7 @@ class _TasbehTapState extends State<TasbehTap> {
         ),
         Spacer(flex: 1,),
         ElevatedButton(onPressed: (){clickMeAction();},
-         child: Text("اضغط",style:TextStyle(fontSize: 28,fontWeight: FontWeight.w700,color: Colors.white )),
+         child: Text(AppLocalizations.of(context)!.click_here,style:TextStyle(fontSize: 28,fontWeight: FontWeight.w700,color: Colors.white )),
          style: ElevatedButton.styleFrom(backgroundColor: AppTheme.lightPrimary),),
           Spacer(flex: 1,),
       ],
