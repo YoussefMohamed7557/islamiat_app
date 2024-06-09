@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:islamiat/app_theme.dart';
 import 'package:islamiat/imagesPath.dart';
-import 'package:islamiat/surah_details.dart';
+import 'package:islamiat/tabs/quraan/surah_details.dart';
 
-import 'list_items/seprator_item.dart';
-import 'list_items/surah_name_item.dart';
+import '../../list_items/seprator_item.dart';
+import '../../list_items/surah_name_item.dart';
 
 class QuraanTap extends StatelessWidget {
   List<String> suraName = [
