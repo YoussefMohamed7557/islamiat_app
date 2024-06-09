@@ -1,0 +1,21 @@
+{
+  "islamiat" : "اسلاميات",
+  "quraan" : "قرءان",
+  "hadeth" : "حديث",
+  "sebha" : "تسبيح",
+  "radio": "الاذاعه",
+  "hadith_number" : " الحديث رقم",
+  "sbhan_allah" : "سبحان الله",
+  "alhamd_lillahi":"سبحان الله",
+  "allah_akbaru": "الله أكبر",
+  "tahleel" : "لا اله الا الله وحده لاشريك له الملك و له الحمد و هو على كل شئ قدير",
+  "click_here" : "اضغط هنا",
+  "zekr_number" : "الذكر رقم",
+  "setting" : "الاعدادات",
+  "language" : "اللغه",
+  "arabic": "العربيه",
+  "english": "الانجليزيه",
+  "theme": "وضع الاضاءه",
+  "dark_mode" : "الوضع الليلى",
+  "light_mode" : "الوضع المضئ"
+}
