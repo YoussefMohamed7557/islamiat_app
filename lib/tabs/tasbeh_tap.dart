@@ -37,7 +37,7 @@ class _TasbehTapState extends State<TasbehTap> {
         SizedBox(height: 24,),
         Container(
           decoration: BoxDecoration(color: Theme.of(context).primaryColor,borderRadius: BorderRadius.circular(28),border: Border.all(color: provider.themeMode==ThemeMode.light?AppTheme.lightPrimary:AppTheme.colorGold)),
-          height: 100,
+          height: 200,
           width: 80,
           child: Center(child: Text("$counter",style:Theme.of(context).textTheme.headline1?.copyWith(color: Colors.white),)),
           padding: EdgeInsets.all(20),
@@ -46,7 +46,7 @@ class _TasbehTapState extends State<TasbehTap> {
         ElevatedButton(onPressed: (){clickMeAction();},
          child: Text(AppLocalizations.of(context)!.click_here,style:TextStyle(fontSize: 28,fontWeight: FontWeight.w700,color: Colors.white )),
          style: ElevatedButton.styleFrom(backgroundColor: Theme.of(context).primaryColor,shape: StadiumBorder(side: BorderSide(color: provider.themeMode==ThemeMode.light?AppTheme.lightPrimary:AppTheme.colorGold))),),
-          Spacer(flex: 1,),
+          Spacer(flex: 3,),
       ],
     );
   }
