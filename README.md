@@ -39,7 +39,9 @@ Islamiat is a mobile application designed to provide users with a comprehensive 
 ### 5. provide Theming
 - **Theme Support**: Toggle between light and dark themes for optimal viewing comfort.
 
- <img src="assets/images/settings_feature" alt="Players Setup Screen" width="600">
+ <img src="assets/images/settings_feature.png" alt="Players Setup Screen" width="600">
+
+ 
 ## Usage
 
 ### Navigating the App
