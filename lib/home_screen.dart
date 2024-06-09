@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamiat/providers/app_provider.dart';
 import 'package:islamiat/tabs/hadeth/hadeth_tap.dart';
 import 'package:islamiat/imagesPath.dart';
 import 'package:islamiat/tabs/quraan/quraan_tap.dart';
@@ -6,6 +7,7 @@ import 'package:islamiat/tabs/radio_tap.dart';
 import 'package:islamiat/tabs/settings/settings_tap.dart';
 import 'package:islamiat/tabs/tasbeh_tap.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routName = "HomeScreen";
@@ -18,9 +20,11 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> content = [QuraanTap(),HadethTap(),TasbehTap(),RadioTap(),SettingsTap()];
   @override
   Widget build(BuildContext context) {
+    AppProvider provider = Provider.of<AppProvider>(context);
+    String selectedBackground = provider.themeMode == ThemeMode.light?ImagesPath.MAIN_BACKGROUND:ImagesPath.MAIN_BACKGROUND_Dark;
     return Stack(
       children:[
-        Image.asset(ImagesPath.MAIN_BACKGROUND,width: double.maxFinite,height: double.maxFinite,fit: BoxFit.fill,),
+        Image.asset(selectedBackground,width: double.maxFinite,height: double.maxFinite,fit: BoxFit.fill,),
         Scaffold(
           appBar: AppBar(title:Center(child:Text(AppLocalizations.of(context)?.islamiat ?? "islamiat",style: Theme.of(context).textTheme.headline1,),),),
           bottomNavigationBar: Theme(

@@ -6,4 +6,5 @@ class ImagesPath{
   static final String TASBEH_ICON = "assets/images/ic_sebha.png";
   static final String RADIO_ICON = "assets/images/ic_radio.png";
   static final String MAIN_BACKGROUND = "assets/images/main_background.png";
+  static final String MAIN_BACKGROUND_Dark = "assets/images/main_background_dark.png";
 }

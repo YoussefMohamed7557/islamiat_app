@@ -8,7 +8,7 @@ class SepratorItem extends StatelessWidget {
       margin:
       EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       height: 2,
-      color: AppTheme.lightPrimary,
+      color: Theme.of(context).primaryColor,
     );
   }
 }

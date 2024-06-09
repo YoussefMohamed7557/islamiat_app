@@ -45,6 +45,8 @@ class _MyAppState extends State<MyApp> {
         HadithDetails.routeName : (context) => HadithDetails()
       },
       theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: provider.themeMode,
     );
   }
 }

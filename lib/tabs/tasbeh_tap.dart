@@ -21,7 +21,7 @@ class _TasbehTapState extends State<TasbehTap> {
       children: [
         SizedBox(height: 60,),
         Container(
-          decoration: BoxDecoration(color: AppTheme.lightPrimary,borderRadius: BorderRadius.circular(40)),
+          decoration: BoxDecoration(color:Theme.of(context).primaryColor,borderRadius: BorderRadius.circular(40)),
           child: Center(child: Text("${tasbihList[currentTasbeh]}",
           style:TextStyle(fontSize: 28,fontWeight: FontWeight.w700,color: Colors.white ),
           textAlign: TextAlign.center,
@@ -32,16 +32,16 @@ class _TasbehTapState extends State<TasbehTap> {
         Text(AppLocalizations.of(context)!.zekr_number,style: Theme.of(context).textTheme.headline1,),
         SizedBox(height: 24,),
         Container(
-          decoration: BoxDecoration(color: Color.fromARGB(211, 200, 178, 149),borderRadius: BorderRadius.circular(28)),
+          decoration: BoxDecoration(color: Theme.of(context).primaryColor,borderRadius: BorderRadius.circular(28)),
           height: 100,
           width: 80,
-          child: Center(child: Text("$counter",style:Theme.of(context).textTheme.headline1,)),
+          child: Center(child: Text("$counter",style:Theme.of(context).textTheme.headline1?.copyWith(color: Colors.white),)),
           padding: EdgeInsets.all(20),
         ),
         Spacer(flex: 1,),
         ElevatedButton(onPressed: (){clickMeAction();},
          child: Text(AppLocalizations.of(context)!.click_here,style:TextStyle(fontSize: 28,fontWeight: FontWeight.w700,color: Colors.white )),
-         style: ElevatedButton.styleFrom(backgroundColor: AppTheme.lightPrimary),),
+         style: ElevatedButton.styleFrom(backgroundColor: Theme.of(context).primaryColor),),
           Spacer(flex: 1,),
       ],
     );

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamiat/imagesPath.dart';
+import 'package:provider/provider.dart';
 import '../../app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../../providers/app_provider.dart';
 
 class HadithDetails extends StatefulWidget {
   static const String routeName = "HadithDetails";
@@ -17,12 +20,14 @@ class _HadithDetailsState extends State<HadithDetails> {
   Widget build(BuildContext context) {
     HadithDetailsArgs args =
         ModalRoute.of(context)?.settings.arguments as HadithDetailsArgs;
+    AppProvider provider = Provider.of<AppProvider>(context);
+    String selectedBackground = provider.themeMode == ThemeMode.light?ImagesPath.MAIN_BACKGROUND:ImagesPath.MAIN_BACKGROUND_Dark;
     if (hadithItem.isEmpty) {
       loadDataFromFile(args.index);
     }
     return Stack(children: [
       Image.asset(
-        ImagesPath.MAIN_BACKGROUND,
+        selectedBackground,
         width: double.maxFinite,
         height: double.maxFinite,
         fit: BoxFit.fill,
@@ -56,7 +61,7 @@ class _HadithDetailsState extends State<HadithDetails> {
                       margin: const EdgeInsets.all(18),
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                          border: Border.all(color:AppTheme.lightPrimary),
+                          border: Border.all(color:Theme.of(context).primaryColor),
                           borderRadius: BorderRadius.circular(20),
                           color: Color.fromARGB(36, 30, 30, 51)),
                     ),

@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamiat/imagesPath.dart';
 import 'package:islamiat/list_items/seprator_item.dart';
+import 'package:provider/provider.dart';
 import '../../list_items/surah_verses_item.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import '../../providers/app_provider.dart';
 
 class SurahDetails extends StatefulWidget {
   static const String routeName = "SurahDetails";
@@ -14,17 +17,18 @@ class SurahDetails extends StatefulWidget {
 
 class _SurahDetailsState extends State<SurahDetails> {
   List<String> surahLines = [];
-
   @override
   Widget build(BuildContext context) {
     SurahDetailsArgs args =
         ModalRoute.of(context)?.settings.arguments as SurahDetailsArgs;
+    AppProvider provider = Provider.of<AppProvider>(context);
+    String selectedBackground = provider.themeMode == ThemeMode.light?ImagesPath.MAIN_BACKGROUND:ImagesPath.MAIN_BACKGROUND_Dark;
     if(surahLines.isEmpty){
       loadDataFromFile(args.index);
     }
     return Stack(children: [
       Image.asset(
-        ImagesPath.MAIN_BACKGROUND,
+        selectedBackground,
         width: double.maxFinite,
         height: double.maxFinite,
         fit: BoxFit.fill,
