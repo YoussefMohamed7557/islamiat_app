@@ -64,8 +64,6 @@ We welcome contributions from the community. To contribute:
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-## Contact
-For support or inquiries, please contact us at [Youssef.mohamed7557@gamil.com](Youssef.mohamed7557@gamil.com).
 
 ---
 
